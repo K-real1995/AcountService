@@ -27,3 +27,9 @@ GET http://localhost:8080/api/v1/accounts/{id} - получение amount из 
 GET http://localhost:8080/api/v1/test_client - запуск тестового клиента
 
 GET http://localhost:8080/api/v1/reset_statistic- запрос на сброс статистики
+
+
+
+Примечение:
+
+для работы с денежными средствами в методе addAmount(Long value), предпочтительнее вместо класса Long использовать класс BigDecimal
