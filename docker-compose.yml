@@ -1,0 +1,27 @@
+
+version: "3.9"
+
+services:
+  # Application
+  csr:
+    image: kreal199540/itech:latest
+    container_name: itechApp
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - 8080:8080
+    depends_on:
+      - database-postgres
+
+  #  PostgreSQL
+  database-postgres:
+    image: postgres:14
+    container_name: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=itech
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - 5433:5432

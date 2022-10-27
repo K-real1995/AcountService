@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: classpath:db/db_changelog/create_table_accounts.sql
+  - include:
+      file: classpath:db/db_changelog/insert_into_table_accounts.sql
