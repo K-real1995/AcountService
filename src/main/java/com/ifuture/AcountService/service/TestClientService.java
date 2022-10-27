@@ -8,4 +8,6 @@ package com.ifuture.AcountService.service;
  */
 public interface TestClientService {
     void makeThreads(Integer rCount, Integer wCount, String idList);
+    Runnable runGetThread(Integer id);
+    Runnable runPostThread(Integer id);
 }
